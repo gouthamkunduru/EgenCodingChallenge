@@ -28,8 +28,7 @@ url : http://localhost:8080/createuser
 
 2- Get: http://localhost:8080/getallusers
 3-PUT: http://localhost:8080/updateuser
-
-{    
+ 
     { 
  
 	 "id": "d2a9866d-ce13-48e3-a8e8-fcd5b374f9e9",
@@ -41,7 +40,7 @@ url : http://localhost:8080/createuser
         "phone": 6145863720,
         "zip": "43402"
 }
-}
+
 
 3- Get:
 http://localhost:8080/getallusers
