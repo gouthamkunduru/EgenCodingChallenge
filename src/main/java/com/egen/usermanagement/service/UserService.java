@@ -1,6 +1,8 @@
 package com.egen.usermanagement.service;
 
 import java.util.List;
+import java.util.UUID;
+
 import com.egen.usermanagement.entities.Users;
 
 /**
@@ -18,6 +20,6 @@ public interface UserService {
 
 	void updateUser(Users users);
 
-	Users findById(int id);
+	Users findById(UUID id);
 
 }

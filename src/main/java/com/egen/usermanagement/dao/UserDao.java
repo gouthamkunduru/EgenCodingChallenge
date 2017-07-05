@@ -1,6 +1,7 @@
 package com.egen.usermanagement.dao;
 
 import java.util.List;
+import java.util.UUID;
 
 import com.egen.usermanagement.entities.Users;
 
@@ -20,5 +21,5 @@ public interface UserDao {
 
 	void updateUser(Users users);
 
-	Users findById(int id);
+	Users findById(UUID id);
 }

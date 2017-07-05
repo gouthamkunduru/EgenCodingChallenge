@@ -15,28 +15,32 @@ Example of json requests:
 url : http://localhost:8080/createuser
 1-POST:(Content-Type →application/json)
 
+{ 
+ 
+        "firstName": "Goutham",
+        "middleName": "middleName",
+        "lastName": "Kunduru",
+        "age": 27,
+        "gender": "M",
+        "phone": 6145863720,
+        "zip": "43402"
+        }
+
+2- Get: http://localhost:8080/getallusers
+3-PUT: http://localhost:8080/updateuser
+
 {    
-    "id" : 1,
-    "firstName": "firstName", 
-    "middleName": "middleName",       
-    "lastName" : "lastName",   
-    "age" : 30,
-    "gender" : "F",
-    "phone" : 9545587457,
-"zip":"zip"
+    { 
+ 
+	 "id": "d2a9866d-ce13-48e3-a8e8-fcd5b374f9e9",
+        "firstName": "Gouthamupdate",
+        "middleName": "middleName",
+        "lastName": "Kunduru",
+        "age": 27,
+        "gender": "M",
+        "phone": 6145863720,
+        "zip": "43402"
 }
-
-
-http://localhost:8080/updateuser
-2-PUT:
-{    
-    "id" : 1,
-    "firstName": "firstNameupdate", 
-    "lastName" : "lastName",   
-    "age" : 20,
-    "gender" : "M",
-    "phone" : 9545587457,
-"zip":"zip"
 }
 
 3- Get:

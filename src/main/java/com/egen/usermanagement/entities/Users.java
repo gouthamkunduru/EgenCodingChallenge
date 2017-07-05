@@ -1,11 +1,15 @@
 package com.egen.usermanagement.entities;
 
 import java.io.Serializable;
+import java.util.UUID;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
 
 /**
  * Implemented During Egen coding Challenge 
@@ -20,8 +24,10 @@ public class Users implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	@Id
-	@Column
-	private int id;
+	@GeneratedValue(generator = "uuid2")
+    @GenericGenerator(name = "uuid2", strategy = "uuid2")
+    @Column(columnDefinition = "BINARY(16)")
+    private UUID id;
 	@Column(nullable = false, length = 50)
 	private String firstName;
 	@Column
@@ -40,7 +46,7 @@ public class Users implements Serializable {
 	public Users() {
 	}
 
-	public Users(int id, String firstName, String middleName, String lastName, int age, String gender, long phone,
+	public Users(UUID id, String firstName, String middleName, String lastName, int age, String gender, long phone,
 			String zip) {
 		this.id = id;
 		this.firstName = firstName;
@@ -52,11 +58,11 @@ public class Users implements Serializable {
 		this.zip = zip;
 	}
 
-	public int getId() {
+	public UUID getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(UUID id) {
 		this.id = id;
 	}
 

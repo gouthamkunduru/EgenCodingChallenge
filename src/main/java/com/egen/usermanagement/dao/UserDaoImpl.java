@@ -1,6 +1,7 @@
 package com.egen.usermanagement.dao;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +38,7 @@ public class UserDaoImpl implements UserDao {
 		session.getCurrentSession().saveOrUpdate(users);
 	}
 
-	public Users findById(int id) {
+	public Users findById(UUID id) {
 		// TODO Auto-generated method stub
 		Users user = (Users) session.getCurrentSession().get(Users.class, id);
 		return user;

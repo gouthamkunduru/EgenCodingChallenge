@@ -1,6 +1,7 @@
 package com.egen.usermanagement.service;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,7 +36,7 @@ public class UserServiceImpl implements UserService {
 		userDao.updateUser(users);
 	}
 
-	public Users findById(int id) {
+	public Users findById(UUID id) {
 		// TODO Auto-generated method stub
 		return userDao.findById(id);
 	}

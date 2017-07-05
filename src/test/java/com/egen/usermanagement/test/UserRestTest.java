@@ -1,6 +1,7 @@
 package com.egen.usermanagement.test;
 
 import java.net.URI;
+import java.util.UUID;
 
 import org.junit.Test;
 import org.springframework.web.client.RestTemplate;
@@ -23,7 +24,7 @@ public class UserRestTest {
 	@Test
 	public void testPostUser() {
 		RestTemplate restTemplate = new RestTemplate();
-		Users users = new Users(3, "firstName", "middleName", "lastName", 25, "M", 5454784514l, "zip");
+		Users users = new Users(UUID.randomUUID(),"firstName", "middleName", "lastName", 25, "M", 5454784514l, "zip");
 		URI uri = restTemplate.postForLocation(URI + "/createuser", users, Users.class);
 	}
 
@@ -37,7 +38,7 @@ public class UserRestTest {
 	@Test
 	public void testUpdateUser() {
 		RestTemplate restTemplate = new RestTemplate();
-		Users user = new Users(3, "firstName", "middleName", "lastName", 26, "M", 5454784514l, "zip");
+		Users user = new Users(UUID.randomUUID(), "firstName", "middleName", "lastName", 26, "M", 5454784514l, "zip");
 		restTemplate.put(URI + "/updateuser", user);
 	}
 }

@@ -23,8 +23,7 @@ import com.egen.usermanagement.service.UserService;
 
 /**
  * Implemented During Egen coding Challenge Rest Controller which Enables
- * Various Operations 
- * Created by Goutham Kunduru on 06/27/2017.
+ * Various Operations Created by Goutham Kunduru on 06/27/2017.
  * 
  * @author Goutham Kunduru
  * @version 1.0
@@ -52,12 +51,6 @@ public class UserRestController {
 		if (result.hasErrors() || !validUser(users)) {
 			return new ResponseEntity<String>("some errors , Please check ur json content!", httpHeaders,
 					HttpStatus.BAD_REQUEST);
-		}
-
-		Users user = userService.findById(users.getId());
-
-		if (user != null) {
-			return new ResponseEntity<String>("User ID Already Exists", httpHeaders, HttpStatus.OK);
 		}
 
 		userService.createUser(users);
