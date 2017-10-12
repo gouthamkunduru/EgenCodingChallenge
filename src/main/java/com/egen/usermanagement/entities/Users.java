@@ -23,7 +23,7 @@ import org.hibernate.annotations.GenericGenerator;
 public class Users implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	//UUID implementation
+	//UUID implementation1
 	@Id
 	@GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "uuid2")
