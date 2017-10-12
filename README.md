@@ -1,7 +1,7 @@
 # EgenCodingChallenge
 # README #
 
-Steps to execute project:
+Steps to execute project are:
 
 1-Clone the project
 2-go to the Project root director where the pom.xml file is located, From cmd/terminal and run mvn jetty:run (make sure that you have maven installed).
