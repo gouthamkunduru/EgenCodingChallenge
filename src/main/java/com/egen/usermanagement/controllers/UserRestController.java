@@ -22,7 +22,7 @@ import com.egen.usermanagement.entities.Users;
 import com.egen.usermanagement.service.UserService;
 
 /**
- * Implemented During Egen coding Challenge Rest Controller which Enables
+ * Implemented During Egen coding Challenge Chicago Rest Controller which Enables
  * Various Operations Created by Goutham Kunduru on 06/27/2017.
  * 
  * @author Goutham Kunduru
